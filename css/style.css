@@ -24,6 +24,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 7.5rem;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -913,6 +917,7 @@ p {
 
 @media (max-width: 900px) {
   .masthead {
+    gap: 0.85rem;
     padding-inline: 1.15rem;
   }
 
@@ -922,25 +927,113 @@ p {
 
   .hero-top {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.15rem;
   }
 
   .hero-photo-block {
+    order: -1;
     justify-content: center;
   }
 
   .hero-text-block {
     max-width: 100%;
+    align-items: center;
     text-align: center;
   }
 
+  .hero-text-block h1 {
+    max-width: 11ch;
+    font-size: clamp(2.8rem, 8.8vw, 4.5rem);
+  }
+
   .lead {
-    max-width: 100%;
+    max-width: 32ch;
     margin-inline: auto;
+    font-size: 1.1rem;
+    line-height: 1.65;
   }
 
   .hero-status {
+    width: 100%;
+    max-width: 34rem;
     margin-inline: auto;
+  }
+
+  .hero-status-message {
+    font-size: 1rem;
+  }
+
+  .brand {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .main-nav {
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.35rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .main-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main-nav a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 0.74rem;
+    letter-spacing: 0.12em;
+    padding: 0.42rem 0.72rem;
+  }
+
+  .games-header h2,
+  .tools-header h2,
+  .education-header h2,
+  .missions-header h2 {
+    font-size: clamp(1.85rem, 6vw, 2.4rem);
+  }
+
+  .games-copy,
+  .tools-copy,
+  .education-copy,
+  .missions-copy {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .tech-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .education-details h3 {
+    font-size: 1.34rem;
+  }
+
+  .mission-details h3 {
+    font-size: 1.36rem;
+  }
+
+  .mission-copy {
+    font-size: 0.96rem;
+  }
+
+  .carousel-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .game-slide {
+    flex-basis: 260px;
+    min-width: 260px;
+  }
+
+  .game-slide img {
+    height: 172px;
   }
 }
 
@@ -954,17 +1047,30 @@ p {
   .masthead {
     top: 0.5rem;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
+    align-items: stretch;
+    padding: 0.9rem;
   }
 
   .main-nav {
-    width: 100%;
-    justify-content: flex-start;
+    gap: 0.45rem;
+    padding-bottom: 0.2rem;
+  }
+
+  .main-nav a {
+    font-size: 0.68rem;
+    padding: 0.38rem 0.64rem;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .brand-name {
+    font-size: 1.12rem;
   }
 
   .portrait-hero {
-    padding: 1.35rem;
+    padding: 1.15rem 1rem 1.05rem;
   }
 
   .portrait-hero::before,
@@ -987,7 +1093,7 @@ p {
   }
 
   .portrait-stage {
-    width: 320px;
+    width: min(100%, 272px);
   }
 
   .portrait-photo {
@@ -997,45 +1103,67 @@ p {
   }
 
   .hero-text-block h1 {
-    font-size: clamp(2.9rem, 12vw, 4.3rem);
+    max-width: none;
+    font-size: clamp(2.35rem, 10.8vw, 3.5rem);
   }
 
   .lead {
-    font-size: 1.16rem;
+    max-width: 30ch;
+    font-size: 1rem;
   }
 
   .games-showcase,
   .tools-showcase,
   .education-showcase,
   .missions-showcase {
-    padding: 1.35rem;
+    padding: 1.1rem 0.95rem 1rem;
+  }
+
+  .games-header,
+  .tools-header,
+  .education-header,
+  .missions-header {
+    margin-bottom: 1rem;
   }
 
   .tools-panel {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding: 0.9rem;
+    gap: 0.75rem;
+    padding: 0.75rem;
   }
 
   .tech-card {
-    min-height: 164px;
-    padding: 1rem 0.85rem;
+    min-height: 146px;
+    gap: 0.65rem;
+    padding: 0.85rem 0.65rem;
+  }
+
+  .tech-card::before {
+    inset: 0.4rem;
   }
 
   .tech-emblem {
-    width: 66px;
-    height: 66px;
-    margin-top: 0.6rem;
+    width: 58px;
+    height: 58px;
+    margin-top: 0.45rem;
+    font-size: 0.82rem;
+  }
+
+  .tech-card h3 {
+    font-size: 0.98rem;
   }
 
   .education-panel {
-    padding: 0.9rem;
+    gap: 0.75rem;
+    padding: 0.75rem;
   }
 
   .education-entry {
     grid-template-columns: 1fr;
     justify-items: center;
     text-align: center;
-    padding: 1rem;
+    gap: 0.85rem;
+    padding: 0.9rem 0.8rem;
   }
 
   .education-emblem {
@@ -1043,11 +1171,30 @@ p {
     height: 88px;
   }
 
+  .education-details h3 {
+    font-size: 1.18rem;
+  }
+
+  .education-course {
+    font-size: 0.96rem;
+  }
+
   .mission-poster {
     grid-template-columns: 1fr;
     justify-items: center;
+    gap: 0.8rem;
     text-align: center;
-    padding: 1rem;
+    padding: 0.9rem 0.8rem;
+  }
+
+  .mission-poster::before {
+    inset: 0.4rem;
+  }
+
+  .mission-poster::after {
+    left: 0.75rem;
+    right: 0.75rem;
+    top: 0.58rem;
   }
 
   .mission-seal {
@@ -1055,7 +1202,16 @@ p {
     height: 68px;
   }
 
+  .mission-details h3 {
+    font-size: 1.18rem;
+  }
+
+  .mission-copy {
+    font-size: 0.94rem;
+  }
+
   .mission-status {
+    font-size: 0.74rem;
     white-space: normal;
   }
 
@@ -1063,13 +1219,48 @@ p {
     gap: 0.55rem;
   }
 
+  .carousel-btn {
+    width: 34px;
+    height: 34px;
+  }
+
   .game-slide {
-    flex-basis: 280px;
-    min-width: 280px;
+    flex-basis: 235px;
+    min-width: 235px;
   }
 
   .game-slide img {
-    height: 184px;
+    height: 156px;
+  }
+}
+
+@media (max-width: 520px) {
+  .masthead,
+  .page-shell,
+  .footer {
+    width: min(calc(100% - 0.5rem), var(--content-width));
+  }
+
+  .portrait-stage {
+    width: min(100%, 244px);
+  }
+
+  .tools-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav a {
+    font-size: 0.64rem;
+    padding: 0.35rem 0.56rem;
+  }
+
+  .game-slide {
+    flex-basis: 210px;
+    min-width: 210px;
+  }
+
+  .game-slide img {
+    height: 144px;
   }
 }
 
