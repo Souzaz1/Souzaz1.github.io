@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#fff7e7" />
+      <stop offset="100%" stop-color="#d9bf93" />
+    </radialGradient>
+  </defs>
+  <circle cx="32" cy="32" r="29" fill="url(#bg)" stroke="#c6a15b" stroke-width="2.5" />
+  <circle cx="32" cy="32" r="24" fill="none" stroke="#e8d3a9" stroke-width="1.5" />
+  <text
+    x="32"
+    y="38"
+    text-anchor="middle"
+    font-family="Georgia, serif"
+    font-size="20"
+    fill="#8d4530"
+    font-weight="700"
+    letter-spacing="1.5"
+  >
+    MC
+  </text>
+</svg>

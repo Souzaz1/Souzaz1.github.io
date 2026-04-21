@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Castelo</title>
+  <meta
+    name="description"
+    content="Meu Castelo: uma home de portfolio com inspiracao romanesca tardia, retrato central e galeria de jogos."
+  >
+  <link rel="icon" type="image/svg+xml" href="img/favicon-mc.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Cinzel+Decorative:wght@700;900&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page-illustration" aria-hidden="true"></div>
+  <div class="page-aureole"></div>
+  <div class="page-stonework"></div>
+
+  <header class="masthead">
+    <a class="brand" href="#castle">
+      <span class="brand-seal">MC</span>
+      <span class="brand-copy">
+        <span class="brand-name">Meu Castelo</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegacao principal">
+      <a href="#castle">Portal</a>
+      <a href="#missoes">Missoes</a>
+      <a href="#jogos">Jogos</a>
+      <a href="#ferramentas">Tecnologias</a>
+      <a href="#formacao">Formacao</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="portrait-hero" id="castle">
+      <div class="hero-top reveal" id="reino">
+        <div class="hero-text-block" id="sobre">
+          <p class="eyebrow"></p>
+          <h1>Gabriel Pereira de Souza</h1>
+          <p class="lead">
+            Apreciador de tecnologia, apaixonado por dados e amante de jogos de RPG medieval. Aqui compartilho um pouco da minha trajetória e do meu fascínio pelo universo da Idade Média.
+          </p>
+
+          <div class="hero-status">
+            <span class="status-label">Cronica do salao</span>
+            <p class="hero-status-message" id="hero-message">
+              O castelo abre os portoes e aguarda novas historias.
+            </p>
+          </div>
+        </div>
+
+        <div class="hero-photo-block">
+          <div class="portrait-stage">
+            <div class="portrait-ornament" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="games-section" id="galeria-jogos">
+      <section class="games-showcase reveal">
+        <div class="games-header">
+          <p class="eyebrow"></p>
+          <h2>RPGS que eu jogo</h2>
+          <p class="games-copy">
+            Aqui compartilho alguns jogos de rpg que ja joguei e atualizo sobre novos jogos.
+          </p>
+        </div>
+
+        <div class="carousel-shell" id="jogos">
+          <button
+            class="carousel-btn prev"
+            type="button"
+            aria-label="Mostrar jogos anteriores"
+            onclick="moverCarrossel(-1)"
+          >
+            &#8249;
+          </button>
+
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="carousel">
+              <div class="game-slide">
+                <img src="img/kcd.jpg" alt="Kingdom Come Deliverance">
+                <span class="game-caption">Kingdom Come Deliverance</span>
+              </div>
+
+              <div class="game-slide">
+                <img src="img/elden_ring.jpg" alt="Elden Ring">
+                <span class="game-caption">Elden Ring</span>
+              </div>
+
+              <div class="game-slide">
+                <img src="img/skyrim.jpg" alt="Skyrim">
+                <span class="game-caption">Skyrim</span>
+              </div>
+
+              <div class="game-slide">
+                <img src="img/Fallout_4.jpg" alt="Fallout 4">
+                <span class="game-caption">Fallout 4</span>
+              </div>
+
+              <div class="game-slide">
+                <img src="img/the_witcher.jpg" alt="The Witcher">
+                <span class="game-caption">The Witcher</span>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-btn next"
+            type="button"
+            aria-label="Mostrar proximos jogos"
+            onclick="moverCarrossel(1)"
+          >
+            &#8250;
+          </button>
+        </div>
+      </section>
+    </section>
+
+    <section class="tools-section" id="ferramentas">
+      <section class="tools-showcase reveal">
+        <div class="tools-header">
+          <p class="eyebrow"></p>
+          <h2>Ferramentas que uso</h2>
+          <p class="tools-copy">
+            Linguagens e ferramentas que sustentam meu castelo digital.
+          </p>
+        </div>
+
+        <div class="tools-panel" aria-label="Secao de tecnologias">
+          <article class="tech-card tech-card-github">
+            <div class="tech-emblem" aria-hidden="true">GH</div>
+            <h3>GitHub</h3>
+          </article>
+
+          <article class="tech-card tech-card-java">
+            <div class="tech-emblem" aria-hidden="true">J</div>
+            <h3>Java</h3>
+          </article>
+
+          <article class="tech-card tech-card-python">
+            <div class="tech-emblem" aria-hidden="true">PY</div>
+            <h3>Python</h3>
+          </article>
+
+          <article class="tech-card tech-card-sql">
+            <div class="tech-emblem" aria-hidden="true">SQL</div>
+            <h3>SQL</h3>
+          </article>
+
+          <article class="tech-card tech-card-javascript">
+            <div class="tech-emblem" aria-hidden="true">JS</div>
+            <h3>JavaScript</h3>
+          </article>
+
+          <article class="tech-card tech-card-css">
+            <div class="tech-emblem" aria-hidden="true">CSS</div>
+            <h3>CSS</h3>
+          </article>
+
+          <article class="tech-card tech-card-html">
+            <div class="tech-emblem" aria-hidden="true">HTML</div>
+            <h3>HTML</h3>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section class="education-section" id="formacao">
+      <section class="education-showcase reveal">
+        <div class="education-header">
+          <p class="eyebrow"></p>
+          <h2>Formação Academica</h2>
+          <p class="education-copy">
+            Este espaco fica reservado para apresentar sua trajetoria de estudo,
+            cursos e formacao academica.
+          </p>
+        </div>
+
+        <div class="education-panel" aria-label="Secao de formacao academica">
+          <article class="education-entry">
+            <div class="education-emblem education-emblem-mackenzie" aria-label="Espaco para foto da Universidade Presbiteriana Mackenzie">
+              <span>M</span>
+            </div>
+
+            <div class="education-details">
+              <h3>Universidade Presbiteriana Mackenzie</h3>
+              <p class="education-course">Ciencia da Computacao</p>
+              <p class="education-period">2025 ate 2028</p>
+            </div>
+          </article>
+
+          <article class="education-entry">
+            <div class="education-emblem education-emblem-senac" aria-label="Espaco para foto do Senac">
+              <span>S</span>
+            </div>
+
+            <div class="education-details">
+              <h3>Senac</h3>
+              <p class="education-course">Analise e Desenvolvimento de Sistemas</p>
+              <p class="education-period">2023 ate 2025</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section class="missions-section" id="missoes">
+      <section class="missions-showcase reveal">
+        <div class="missions-header">
+          <p class="eyebrow">Quadro de estudos</p>
+          <h2>Missoes em andamento</h2>
+          <p class="missions-copy">
+            Um mural de cartazes com as areas que estou estudando e aprofundando.
+          </p>
+        </div>
+
+        <div class="missions-panel" aria-label="Missoes de estudo em andamento">
+          <article class="mission-poster">
+            <div class="mission-seal" aria-hidden="true">IA</div>
+            <div class="mission-details">
+              <p class="mission-label">Missao I</p>
+              <h3>Inteligencia Artificial</h3>
+              <p class="mission-copy">
+                Explorando fundamentos, modelos, aplicacoes e possibilidades para projetos reais.
+              </p>
+            </div>
+            <span class="mission-status">Em estudo</span>
+          </article>
+
+          <article class="mission-poster">
+            <div class="mission-seal" aria-hidden="true">CD</div>
+            <div class="mission-details">
+              <p class="mission-label">Missao II</p>
+              <h3>Ciencia de Dados</h3>
+              <p class="mission-copy">
+                Estudando estruturas, investigacao de dados e construcao de analises mais robustas.
+              </p>
+            </div>
+            <span class="mission-status">Em estudo</span>
+          </article>
+
+          <article class="mission-poster">
+            <div class="mission-seal" aria-hidden="true">AD</div>
+            <div class="mission-details">
+              <p class="mission-label">Missao III</p>
+              <h3>Analise de Dados</h3>
+              <p class="mission-copy">
+                Praticando leitura, limpeza, interpretacao e apresentacao clara de informacoes.
+              </p>
+            </div>
+            <span class="mission-status">Em estudo</span>
+          </article>
+
+          <article class="mission-poster">
+            <div class="mission-seal" aria-hidden="true">EST</div>
+            <div class="mission-details">
+              <p class="mission-label">Missao IV</p>
+              <h3>Estatistica</h3>
+              <p class="mission-copy">
+                Reforcando base matematica para apoiar analise, inferencia e tomada de decisao.
+              </p>
+            </div>
+            <span class="mission-status">Em estudo</span>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Meu Castelo &middot; Cronica iniciada em <span id="current-year"></span></p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
